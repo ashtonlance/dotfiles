@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "all",
+      "configurations": ["server", "client"]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "client",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceRoot}"
+      ],
+      "internalConsoleOptions": "neverOpen",
+      "sourceMaps": true,
+      "outFiles": ["${workspaceRoot}/client/out/**/*.js"],
+      "preLaunchTask": "npm"
+    },
+    {
+      "name": "server",
+      "type": "node",
+      "request": "attach",
+      "port": 6005,
+      "sourceMaps": true,
+      "outFiles": ["${workspaceRoot}/client/server/**/*.js"]
+    }
+  ]
+}

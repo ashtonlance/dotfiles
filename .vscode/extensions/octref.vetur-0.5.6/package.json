@@ -1,0 +1,115 @@
+{
+	"name": "vetur",
+	"displayName": "vetur",
+	"description": "Vue tooling for VSCode",
+	"icon": "asset/vue.png",
+	"version": "0.5.6",
+	"publisher": "octref",
+	"scripts": {
+		"compile": "tsc -p client"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/octref/vetur.git"
+	},
+	"keywords": [
+		"vetur",
+		"Vue",
+		"vue",
+		"vuejs"
+	],
+	"categories": [
+		"Languages"
+	],
+	"engines": {
+		"vscode": "^1.8.0"
+	},
+	"activationEvents": [
+		"onLanguage:vue"
+	],
+	"main": "./client/out/htmlMain",
+	"contributes": {
+		"languages": [
+			{
+				"id": "vue",
+				"aliases": [
+					"Vue",
+					"vue"
+				],
+				"extensions": [
+					".vue"
+				],
+				"configuration": "./languages/vue.json"
+			},
+			{
+				"id": "vue-html",
+				"aliases": [
+					"Vue-html"
+				],
+				"configuration": "./languages/vue-html.json"
+			},
+			{
+				"id": "sass",
+				"aliases": [
+					"SASS",
+					"Sass",
+					"sass"
+				],
+				"configuration": "./languages/sass.json"
+			},
+			{
+				"id": "postcss",
+				"aliases": [
+					"PostCSS",
+					"POSTCSS"
+				],
+				"configuration": "./languages/postcss.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vue",
+				"scopeName": "source.vue",
+				"path": "./syntaxes/vue.tmLanguage",
+				"embeddedLanguages": {
+					"text.html.basic": "html",
+					"text.vue-html": "vue-html",
+					"text.jade": "jade",
+					"text.pug": "pug",
+					"source.css": "css",
+					"source.css.sass": "sass",
+					"source.css.scss": "scss",
+					"source.css.less": "less",
+					"source.css.postcss": "postcss",
+					"source.stylus": "stylus",
+					"source.js": "javascript",
+					"source.ts": "typescript",
+					"source.coffee": "coffeescript"
+				}
+			},
+			{
+				"language": "sass",
+				"scopeName": "source.css.sass",
+				"path": "./syntaxes/sass.json"
+			},
+			{
+				"language": "postcss",
+				"scopeName": "source.css.postcss",
+				"path": "./syntaxes/postcss.json"
+			},
+			{
+				"language": "vue-html",
+				"scopeName": "text.vue-html",
+				"path": "./syntaxes/vue-html.tmLanguage",
+				"embeddedLanguages": {
+					"source.js": "javascript"
+				}
+			}
+		]
+	},
+	"__metadata": {
+		"id": "2f5dd8cb-d251-4d70-abfe-ddebcb077483",
+		"publisherId": "c3b70842-905b-406e-8f5b-153e8de05481",
+		"publisherDisplayName": "Pine Wu"
+	}
+}

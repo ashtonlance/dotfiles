@@ -1,0 +1,49 @@
+{
+  "https://apps.ionic.io": [
+    {
+      "key": "__cfduid",
+      "value": "d23013263392b641dded51136c3f041f31485375714",
+      "expires": "2018-01-25T20:21:54.000Z",
+      "domain": "ionic.io",
+      "path": "/",
+      "httpOnly": true,
+      "hostOnly": false,
+      "creation": "2017-01-25T20:21:55.525Z",
+      "lastAccessed": "2017-01-25T20:21:55.535Z"
+    },
+    {
+      "key": "csrftoken",
+      "value": "kX43XUFi14ZmIqVdMxZ1snHjoZwuZgF9",
+      "expires": "2018-01-24T20:21:55.000Z",
+      "maxAge": 31449600,
+      "domain": "apps.ionic.io",
+      "path": "/",
+      "hostOnly": false,
+      "creation": "2017-01-25T20:21:55.526Z",
+      "lastAccessed": "2017-01-25T20:21:55.535Z"
+    },
+    {
+      "key": "ion_cloud_csrf",
+      "value": "kX43XUFi14ZmIqVdMxZ1snHjoZwuZgF9",
+      "expires": "2018-01-24T20:21:55.000Z",
+      "maxAge": 31449600,
+      "domain": "apps.ionic.io",
+      "path": "/",
+      "hostOnly": false,
+      "creation": "2017-01-25T20:21:55.527Z",
+      "lastAccessed": "2017-01-25T20:21:55.535Z"
+    },
+    {
+      "key": "sessionid",
+      "value": "mrpipz8gsfw0bgamjy4zxyteia7r8rfv",
+      "expires": "2017-02-08T20:21:55.000Z",
+      "maxAge": 1209600,
+      "domain": "apps.ionic.io",
+      "path": "/",
+      "httpOnly": true,
+      "hostOnly": false,
+      "creation": "2017-01-25T20:21:55.527Z",
+      "lastAccessed": "2017-01-25T20:21:55.535Z"
+    }
+  ]
+}

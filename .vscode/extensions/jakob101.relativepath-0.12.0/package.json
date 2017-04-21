@@ -1,0 +1,103 @@
+{
+	"name": "RelativePath",
+	"description": "Get relative url paths from files in the current workspace.",
+	"version": "0.12.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jakob101/RelativePath"
+	},
+	"publisher": "jakob101",
+	"galleryBanner": {
+		"color": "#373277",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^0.10.x"
+	},
+	"categories": [
+		"Other"
+	],
+	"license": "MIT",
+	"displayName": "Relative Path",
+	"activationEvents": [
+		"onCommand:extension.relativePath"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.relativePath",
+				"title": "Relative Path"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.relativePath",
+				"key": "ctrl+shift+h",
+				"mac": "cmd+shift+h",
+				"when": "editorTextFocus"
+			}
+		],
+		"configuration": {
+			"title": "RelativePath extension configuration",
+			"type": "object",
+			"properties": {
+				"relativePath.ignore": {
+					"type": "array",
+					"default": [
+						"**/node_modules/**",
+						"**/*.dll",
+						"**/obj/**",
+						"**/objd/**"
+					],
+					"description": "An array of glob keys to ignore when searching.",
+					"items": {
+						"type": "string"
+					}
+				},
+				"relativePath.removeExtension": {
+					"type": "boolean",
+					"default": false,
+					"description": "Excludes the extension from the relative path url (Useful for systemjs imports)."
+				},
+				"relativePath.removeLeadingDot": {
+					"type": "boolean",
+					"default": false,
+					"description": "Removes the leading ./ character when the path is pointing to a parent folder."
+				},
+				"relativePath.excludedExtensions": {
+					"type": "array",
+					"default": [
+						".js"
+					],
+					"description": "An array of extensions to exclude from the relative path url (Useful for used with Webpack or when importing files of mixed types)"
+				}
+			}
+		}
+	},
+	"icon": "icon.png",
+	"keywords": [
+		"relative",
+		"path",
+		"url",
+		"file"
+	],
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "^0.11.0"
+	},
+	"dependencies": {
+		"@types/glob": "^5.0.29",
+		"glob": "^7.0.6"
+	},
+	"__metadata": {
+		"id": "e8b469bd-915d-4070-bfc2-05c9b546f8ee",
+		"publisherId": "ce7c7817-71f3-4c7b-beaa-d22eb4299832",
+		"publisherDisplayName": "jakob101"
+	}
+}

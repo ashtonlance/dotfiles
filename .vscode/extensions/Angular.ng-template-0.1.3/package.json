@@ -1,0 +1,58 @@
+{
+	"name": "ng-template",
+	"displayName": "Angular Language Service",
+	"description": "Editor services for Angular templates",
+	"version": "0.1.3",
+	"publisher": "Angular",
+	"icon": "angular.png",
+	"engines": {
+		"vscode": "^1.4.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:ng-template",
+		"onLanguage:html",
+		"onLanguage:typescript"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "ng-template",
+				"aliases": [
+					"Angular Template",
+					"ng",
+					"ng-html"
+				],
+				"extensions": [
+					".ng",
+					".ngml",
+					".ng.html"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/node": "^6.0.38",
+		"typescript": "^2.1.0-dev.20160830",
+		"vscode": "^0.11.15"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^2.4.2-next.12"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/angular/vscode-ng-template-service"
+	},
+	"__metadata": {
+		"id": "a92d457e-6f3f-4167-8087-1a54e1b6e00e",
+		"publisherId": "5a69cff0-bd3b-4074-999f-4952fc2b037a",
+		"publisherDisplayName": "Angular"
+	}
+}

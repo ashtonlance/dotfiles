@@ -1,0 +1,29 @@
+{
+  "name": "vscode-html-languageserver",
+  "description": "HTML language server",
+  "version": "1.0.0",
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "typescript": "^2.2.2",
+    "vetur-vls": "^0.3.1",
+    "vscode-css-languageservice": "^2.0.0",
+    "vscode-languageserver": "^3.0.5",
+    "vscode-uri": "^1.0.0",
+    "vue-template-compiler": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.62",
+    "@types/node": "^6.0.54"
+  },
+  "scripts": {
+    "compile": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc -p .",
+    "watch": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc --watch -p .",
+    "linkvls": "npm rm vetur-vls && npm ln vetur-vls && cd ../client/server && npm rm vetur-vls && npm ln vetur-vls",
+    "unlinkvls": "rm node_modules/vetur-vls && rm ../client/server/node_modules/vetur-vls && npm i"
+  }
+}

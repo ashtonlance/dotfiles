@@ -1,0 +1,167 @@
+{
+	"name": "vetur",
+	"displayName": "vetur",
+	"description": "Vue tooling for VSCode",
+	"icon": "asset/vue.png",
+	"version": "0.6.0",
+	"publisher": "octref",
+	"scripts": {
+		"compile": "tsc -p client"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/octref/vetur.git"
+	},
+	"keywords": [
+		"vetur",
+		"Vue",
+		"vue",
+		"vuejs"
+	],
+	"categories": [
+		"Languages"
+	],
+	"engines": {
+		"vscode": "^1.8.0"
+	},
+	"activationEvents": [
+		"onLanguage:vue"
+	],
+	"main": "./client/out/htmlMain",
+	"contributes": {
+		"languages": [
+			{
+				"id": "vue",
+				"aliases": [
+					"Vue",
+					"vue"
+				],
+				"extensions": [
+					".vue"
+				],
+				"configuration": "./languages/vue.json"
+			},
+			{
+				"id": "vue-html",
+				"aliases": [
+					"Vue-html"
+				],
+				"configuration": "./languages/vue-html.json"
+			},
+			{
+				"id": "sass",
+				"aliases": [
+					"SASS",
+					"Sass",
+					"sass"
+				],
+				"configuration": "./languages/sass.json"
+			},
+			{
+				"id": "postcss",
+				"aliases": [
+					"PostCSS",
+					"POSTCSS"
+				],
+				"configuration": "./languages/postcss.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vue",
+				"scopeName": "source.vue",
+				"path": "./syntaxes/vue.tmLanguage",
+				"embeddedLanguages": {
+					"text.html.basic": "html",
+					"text.vue-html": "vue-html",
+					"text.jade": "jade",
+					"text.pug": "pug",
+					"source.css": "css",
+					"source.css.scss": "scss",
+					"source.css.less": "less",
+					"source.css.postcss": "postcss",
+					"source.sass": "sass",
+					"source.stylus": "stylus",
+					"source.js": "javascript",
+					"source.ts": "typescript",
+					"source.coffee": "coffeescript"
+				}
+			},
+			{
+				"language": "sass",
+				"scopeName": "source.sass",
+				"path": "./syntaxes/sass.tmLanguage"
+			},
+			{
+				"language": "postcss",
+				"scopeName": "source.css.postcss",
+				"path": "./syntaxes/postcss.json"
+			},
+			{
+				"language": "vue-html",
+				"scopeName": "text.vue-html",
+				"path": "./syntaxes/vue-html.tmLanguage",
+				"embeddedLanguages": {
+					"source.js": "javascript"
+				}
+			}
+		],
+		"configuration": {
+			"title": "vetur configuration",
+			"properties": {
+				"vetur.format.html.max_preserve_newlines": {
+					"type": "number",
+					"default": 1,
+					"decription": "Maximum number of line breaks to be preserved in one chunk (0 to disable)"
+				},
+				"vetur.format.html.preserve_newlines": {
+					"type": "boolean",
+					"default": true,
+					"decription": "Whether existing line breaks before elements should be preserved (only works before elements, not inside tags or for text)"
+				},
+				"vetur.format.html.wrap_line_length": {
+					"type": "number",
+					"default": 0,
+					"decription": "Lines should wrap at next opportunity after this number of characters (0 to disable)"
+				},
+				"vetur.format.html.wrap_attributes": {
+					"type": "string",
+					"default": "auto",
+					"enum": [
+						"auto",
+						"force",
+						"force-aligned",
+						"force-expand-multiline"
+					],
+					"enumDescriptions": [
+						"Wrap attributes only when line length is exceeded",
+						"Wrap each attribute except first",
+						"Wrap each attribute except first and keep aligned",
+						"Wrap each attribute"
+					],
+					"decription": "Wrap attributes"
+				},
+				"vetur.format.css.newline_between_rules": {
+					"type": "boolean",
+					"default": true,
+					"description": "Add a new line after every css rule"
+				},
+				"vetur.format.css.preserve_newlines": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether existing line breaks before elements should be preserved (only works before elements, not inside tags or for text)"
+				},
+				"vetur.format.js.InsertSpaceBeforeFunctionParenthesis": {
+					"type": "boolean",
+					"default": false,
+					"description": "Add a space before function parenthesis"
+				}
+			}
+		}
+	},
+	"__metadata": {
+		"id": "2f5dd8cb-d251-4d70-abfe-ddebcb077483",
+		"publisherId": "c3b70842-905b-406e-8f5b-153e8de05481",
+		"publisherDisplayName": "Pine Wu"
+	}
+}

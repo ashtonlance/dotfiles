@@ -1,0 +1,46 @@
+{
+	"name": "vscode-terminal-here",
+	"displayName": "Terminal Here",
+	"description": "Creates an intergrated terminal session at the current file's directory",
+	"version": "0.0.5",
+	"publisher": "Tyriar",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:terminalHere.create"
+	],
+	"bugs": {
+		"url": "https://github.com/Tyriar/vscode-terminal-here/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Tyriar/vscode-terminal-here"
+	},
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "terminalHere.create",
+				"title": "Terminal Here: Create Terminal"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.0"
+	},
+	"__metadata": {
+		"id": "55066e9b-6d65-4803-97e2-33316bef79e8",
+		"publisherId": "738ff3bb-8e77-45d5-bd26-7c9ad62959b9",
+		"publisherDisplayName": "Daniel Imms"
+	}
+}
